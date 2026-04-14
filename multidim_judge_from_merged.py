@@ -108,7 +108,7 @@ def evaluate_support_models(merged_conversations_file='merged.json',
         result.append(judge)
 
         with open(results_file, "w", encoding="utf-8") as file:
-            json.dump(result, file)
+            json.dump(result, file, ensure_ascii=False)
 
     print(f"Saved evaluations in {results_file}")
 
